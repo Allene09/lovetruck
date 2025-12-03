@@ -100,18 +100,32 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   }
 
+  .envelope__letter.expanded {
+    height: 500px !important;
+    color: #5a4444;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+
   /* Mobile responsive - bigger letter on small screens */
   @media (max-width: 768px) {
     .envelope__letter {
-      font-size: 11px;
+      font-size: 10px;
       line-height: 1.5;
-      padding: 10px 14px;
+      padding: 8px 12px;
+      width: 185px;
+      left: 17px;
     }
     
     .envelope:hover .envelope__letter,
     .envelope__letter:active,
-    .envelope__letter:focus {
-      height: 420px;
+    .envelope__letter:focus,
+    .envelope__letter.expanded {
+      height: 520px;
+    }
+
+    .envelope__letter p {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
   }
 
