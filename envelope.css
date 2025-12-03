@@ -92,6 +92,29 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   }
 
+  /* Mobile support - expand on tap/click */
+  .envelope__letter:active,
+  .envelope__letter:focus {
+    height: 380px;
+    color: #5a4444;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Mobile responsive - bigger letter on small screens */
+  @media (max-width: 768px) {
+    .envelope__letter {
+      font-size: 11px;
+      line-height: 1.5;
+      padding: 10px 14px;
+    }
+    
+    .envelope:hover .envelope__letter,
+    .envelope__letter:active,
+    .envelope__letter:focus {
+      height: 420px;
+    }
+  }
+
   .envelope__letter:before {
     content: "";
     height: 0;
